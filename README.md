@@ -1,7 +1,7 @@
 # Dialogue-Quest-NPC
 
 A **Roblox (Luau)** template for building **branching NPC dialogue** and **quest-giver** interactions. Drop it into your game to let players talk to NPCs, make choices, start quests, and receive rewards—while keeping quest state authoritative on the server.
-
+(Core game code transfered over, project directory, assets, and exact file structure is not the same)
 ## Features
 
 - **Branching dialogue trees** with player choices.
