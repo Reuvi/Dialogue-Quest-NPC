@@ -209,14 +209,6 @@ end
 
 ---
 
-## Extending
-
-* **Conditions**: gate options based on inventory, quest state, or attributes.
-* **Dynamic text**: interpolate player name, counts, timers, etc.
-* **Multi-stage conversations**: compose trees with shared sub-nodes.
-* **Audio**: extend `voice` to include SFX, lip-sync metadata, or subtitles.
-* **Analytics**: log chosen options to tweak writing & reward pacing.
-
 ## Troubleshooting
 
 * **No dialogue on prompt**: check the top model has the `"InteractableNPC"` tag and that the key exists in `NPCData.Interactable`.
