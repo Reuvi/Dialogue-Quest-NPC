@@ -1,7 +1,3 @@
-Here’s a **drop-in replacement** for your README with the **Usage** updated to match your actual Interactable NPC system (the `ReplicatedStorage.NPCData.Interactable` table + `Actions` modules, ProximityPrompt, Zones, and the “actions only on terminal options” rule).
-
----
-
 # Dialogue-Quest-NPC
 
 A **Roblox (Luau)** template for building **branching NPC dialogue** and **quest-giver** interactions using a simple **Interactable data table**. NPCs are configured by name under `ReplicatedStorage.NPCData.Interactable`, with optional **voice lines** and **terminal actions**.
