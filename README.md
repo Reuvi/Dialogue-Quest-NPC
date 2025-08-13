@@ -2,7 +2,6 @@
 
 A **Roblox (Luau)** template for building **branching NPC dialogue** and **quest-giver** interactions using a simple **Interactable data table**. NPCs are configured by name under `ReplicatedStorage.NPCData.Interactable`, with optional **voice lines** and **terminal actions**.
 ![NPC Dialogue](./media/screenshot.PNG)
----
 **Status:** Partial code drop for portfolio (not immediately runnable).
 **Why:** Proprietary/large assets and project-specific file structure are excluded.
 
