@@ -59,11 +59,6 @@ ServerScriptService/
 * Create Modules under **`ReplicatedStorage.NPCData.Actions`**.
   Include at least **`nothing.lua`** (a no-op) so terminal options have a detectable action.
 
-4. **Bind on server**
-
-* In a server script (e.g., `Interactables.server.lua`), read/tag and wire prompts to your Interactable system (your binder).
-  The binder should look up `NPCData.Interactable[topModel.Name]`.
-
 ---
 
 ## Usage
@@ -176,35 +171,6 @@ actions = {
 4. Add a **ProximityPrompt** in the NPC’s torso/`HumanoidRootPart` (left uninitialized).
 5. *(Optional)* Add a **`Zones`** folder under `NPC` and place a Part that defines custom radius.
 6. Put NPC data in **`ReplicatedStorage.NPCData.Interactable`** using a key equal to the **top model’s Name**.
-
-### 4) Server binder (example)
-
-Here’s a minimal idea of how your server binder might associate tagged NPCs with data:
-
-```lua
--- ServerScriptService/Interactables.server.lua (example scaffold)
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local CollectionService = game:GetService("CollectionService")
-
-local InteractableData = require(ReplicatedStorage.NPCData.Interactable)
-
-for _, npcTop in ipairs(CollectionService:GetTagged("InteractableNPC")) do
-  local npcModel = npcTop:FindFirstChild("NPC")
-  local prompt = npcModel and npcModel:FindFirstChildWhichIsA("ProximityPrompt", true)
-  local data = InteractableData[npcTop.Name]
-  if prompt and data then
-    prompt.Triggered:Connect(function(player)
-      -- Your conversation driver:
-      -- 1) Show data.response text/voice
-      -- 2) Present data.options
-      -- 3) Traverse until a terminal node (node.actions), then run each action with ctx
-      --    for _, action in pairs(node.actions) do action({ player = player, npc = npcTop }) end
-    end)
-  end
-end
-```
-
-> Your real binder will use your UI and traversal logic; this is only to illustrate how the mapping by `npcTop.Name` works.
 
 ---
 
