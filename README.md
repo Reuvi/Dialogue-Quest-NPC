@@ -181,10 +181,6 @@ actions = {
 * **Wrong NPC data**: confirm the **top model’s `Name` matches** the key under `Interactable[...]`.
 * **Radius not respected**: verify you placed Parts under `NPC/Zones` and your binder reads them.
 
-## License
-
-Add your preferred license (e.g., MIT).
-
 ## Credits
 
 Built by **Reuvi**. Thanks to the Roblox dev community for patterns on data-driven dialogue and clean server hooks.
