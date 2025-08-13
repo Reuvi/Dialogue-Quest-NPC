@@ -169,7 +169,6 @@ actions = {
 
 ### 3) NPC setup in Workspace
 
-Follow your original setup guide (adjusted for clarity):
 
 1. **Model the NPC** inside a model named `NPC` (rig + Humanoid).
 2. Put that `NPC` model **inside a top model** (your distinguishable NPC name).
